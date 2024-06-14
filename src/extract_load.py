@@ -15,8 +15,7 @@ commodities = ('CL=F', 'GC=F', 'SI=F')  # Petroleum & Gold & Silver
 def get_commoditie_data(symbol: str, period: str = '5D', interval: str = '1D') -> DataFrame:
     ticker: Ticker = yf.Ticker(ticker=symbol)
     data: DataFrame = ticker.history(period=period, interval=interval)[['Close']]
-    data.insert(loc=0, column='Symbol', value=symbol)
-    data.columns = [col.lower() for col in data.columns]
+    data.insert(loc=0, column='symbol', value=symbol)
 
     return data
 
