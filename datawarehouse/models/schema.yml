@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: dbsales
+    schema: public
+    tables:
+      - name: commodities
+        description: "Table containing historical data on commodities"
+        columns:
+          - name: date
+            description: "Observation Date"
+            
+          - name: close
+            description: "Commodity Closing Price"
+            
+          - name: symbol
+            description: "Commodity Symbol"
+      - name: commodities_movement
+        description: "Seed Table"
+        columns:
+          - name: date
+            description: "Transaction Date"
+          - name: symbol
+            description: "Commodity Symbol"
+          - name: action
+            description: "Transaction Type (Buy/Sell)"
+          - name: quantity
+            description: "Amount Transacted"

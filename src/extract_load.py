@@ -16,6 +16,7 @@ def get_commoditie_data(symbol: str, period: str = '5D', interval: str = '1D') -
     ticker: Ticker = yf.Ticker(ticker=symbol)
     data: DataFrame = ticker.history(period=period, interval=interval)[['Close']]
     data.insert(loc=0, column='Symbol', value=symbol)
+    data.columns = [col.lower() for col in data.columns]
 
     return data
 
@@ -30,7 +31,7 @@ def get_all_commodities_data(commodities: tuple) -> DataFrame:
 def load_in_database(df: DataFrame, schema: str) -> None:
     df.to_sql(name='commodities', con=engine,
               if_exists='replace', index=True,
-              index_label='Date', schema=schema)
+              index_label='date', schema=schema)
     
     print(f'The data was saved in schema -> {schema} <- in the PostgreSQL database')
 
