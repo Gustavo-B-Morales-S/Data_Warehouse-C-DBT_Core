@@ -38,3 +38,4 @@ def load_in_database(df: DataFrame, schema: str) -> None:
 if __name__ == '__main__':
     df: DataFrame = get_all_commodities_data(commodities=commodities)
     load_in_database(df=df, schema='public')
+
