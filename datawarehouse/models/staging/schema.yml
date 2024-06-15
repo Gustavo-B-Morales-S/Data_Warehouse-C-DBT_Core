@@ -6,18 +6,25 @@ models:
     columns:
       - name: date
         description: "Observation date in YYYY-MM-DD format"
+        
       - name: closing_price
         description: "Commodity closing price with decimal precision 4.2"
+        
       - name: symbol
         description: "Commodity Symbol" 
+        
+        
   - name: stg_commodities_movement
     description: "Staging table for commodity movement data"
     columns:
       - name: date
         description: "Transaction date in YYYY-MM-DD format"
+        
       - name: symbol
         description: "Commodity Symbol"
+        
       - name: action
         description: "Transaction Type (buy/sell)"
+        
       - name: quantity
         description: "Amount Transacted"

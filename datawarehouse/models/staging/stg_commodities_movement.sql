@@ -1,4 +1,3 @@
--- Importing
 
 with source as (
     select
@@ -10,8 +9,6 @@ with source as (
     from {{ source ('dbsales', 'commodities_movement') }}
 ),
 
--- Renaming
-
 renamed as (
     select
         cast(date as Date),
@@ -20,7 +17,5 @@ renamed as (
         quantity
     from source
 )
-
--- Selecting
 
 select * from renamed

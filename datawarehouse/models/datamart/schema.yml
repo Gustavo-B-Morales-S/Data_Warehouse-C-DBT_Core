@@ -6,15 +6,21 @@ models:
     columns:
       - name: date
         description: "Observation Date"
+        
       - name: symbol
         description: "Commodity Symbol"
+        
       - name: closing_price
         description: "Commodity Close Price"
+        
       - name: action
         description: "Transaction Type (Buy/Sell)"
+        
       - name: quantity
         description: "Transact Quantity"
+        
       - name: value
         description: "Transaction Value"
+        
       - name: gain
         description: "Transaction gain or loss"
