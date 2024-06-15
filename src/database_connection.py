@@ -6,6 +6,7 @@ from sqlalchemy import Engine, Connection, create_engine
 from typing import Tuple
 from dotenv import load_dotenv
 
+
 # Loading enviroment variables
 load_dotenv()
 DB_HOST = getenv(key='DB_HOST_PROD')

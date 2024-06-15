@@ -1,0 +1,7 @@
+typing
+pandas
+sqlalchemy
+yfinance
+python-dotenv
+psycopg2-binary
+
