@@ -14,6 +14,13 @@ from src.database_connection import engine, connection
 
 
 def get_data() -> DataFrame:
+    """
+    Retrieves data from a PostgreSQL database table named 'DM_Commodities' 
+    located in the 'Public' schema using SQLAlchemy engine connection.
+
+    Returns:
+        A DataFrame containing the retrieved data from the database table.
+    """
     sql_query = f"""
     SELECT Date,
            Symbol,
